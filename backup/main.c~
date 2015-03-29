@@ -1,0 +1,114 @@
+/*
+   ChibiOS/RT - Copyright (C) 2006-2013 Giovanni Di Sirio
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+#include "ch.h"
+#include "hal.h"
+#include "shm.h"
+#include "stateEvalTask.h"
+#include "usbcfg.h"
+#include "shell.h"
+#include "chprintf.h"
+#include "myusb.h"
+#include "currentcntrl.h"
+#include "canControl.h"
+#include "adcsetup.h"
+#include "interrupts.h"
+#include "spisetup.h"
+#include "wheelCtrl.h"
+#include "valveCtrl.h"
+
+volatile int p, h, t;
+int main(void) {
+
+  /*
+   * System initializations.
+   * - HAL initialization, this also initializes the configured device drivers
+   *   and performs the board-specific initializations.
+   * - Kernel initialization, the main() function becomes a thread and the
+   *   RTOS is active.
+   */
+  halInit();
+  chSysInit();
+
+  /* initiates the usbShell */
+  //usbShellInit();
+
+
+
+  /* initialize the shared memory so the getters and setters will work */
+  /* initialzes the pads used for pwm signals and starts the pwm signal generation*/
+  shmInit();
+  //pwmInitOwn();
+  valveInit();
+
+
+  wheelHeightCtrlInit();
+
+  initInterrupt();
+  //powercntrlInitOwn();
+  //adcInitOwn();
+  //initSpi();
+  canInitOwn();
+
+  chThdSleepMilliseconds(1000); // wait for Hardware Driver to Settle
+  //WORKING_AREA(waUser, 150);
+  //(void)chThdCreateStatic(waUser, sizeof(waUser),
+  //NORMALPRIO, userThread, NULL);
+  WORKING_AREA(waStateEval, 150);
+  (void)chThdCreateStatic(waStateEval, sizeof(waStateEval),
+      NORMALPRIO, stateEval, NULL);
+  //turnOnAllValves(DUTY_CYCLE33);
+  //BaseSequentialStream *chp;
+  //chprintf(chp, "Welcome to arm project!!!");
+
+  //palTogglePad(GPIOD, 13);
+  //palClearPad(GPIOD,GPIOD_RELAY_COMP_PWM);
+  //chThdSleepMilliseconds(1000);
+  palSetPad(GPIOD,GPIOD_BUTTON_UP_LED);
+  palSetPad(GPIOD,GPIOD_BUTTON_DOWN_LED);
+
+  palSetPadMode(GPIOB, GPIOB_VALVE_PWM_1, PAL_MODE_ALTERNATE(2));
+  palSetPadMode(GPIOB, GPIOB_VALVE_PWM_2, PAL_MODE_ALTERNATE(2));
+  while (TRUE) {
+    //spawnUsbShell();
+    //turnOnAllValves(DUTY_CYCLE33);
+    //palTogglePad(GPIOD,GPIOD_RELAY_COMP_PWM);
+    //setCompressorState(1);
+
+    //palSetPad(GPIOB, GPIOB_VALVE_PWM_1);
+
+    //palSetPad(GPIOB, GPIOB_VALVE_PWM_2);
+    chThdSleepMilliseconds(500);
+    //setCompressorState(0);
+    //turnOffAllValves();
+
+    //turnOnValve(VALVE1,1);
+    //palClearPad(GPIOB, GPIOB_VALVE_PWM_1);
+
+    //palClearPad(GPIOB, GPIOB_VALVE_PWM_2);
+
+    chThdSleepMilliseconds(500);
+    //palTogglePad(GPIOE,GPIOE_LED4);
+
+
+    //p = getWheelPressure(BACK_RIGHT);
+    //h = getWheelHeight(BACK_RIGHT);
+    //t = getWheelTemperature(BACK_RIGHT);
+
+  }
+}
+
+
