@@ -24,7 +24,7 @@ Settings:
 This .vimrc will include the plugins airline, pathogen, Youcompleteme and fugitive as
 well as lizard colortheme.
 
-Furthermore it will contain some c-code specific things since I mostly use cim for
+Furthermore it will contain some c-code specific things since I mostly use vim for
 embedded programming, for instance it will add the current folder of the file opened
 and all folders under it to the path for easy opening with :find and also has a
 shortcut for switching between c header/source files for all folders in path. This might break
