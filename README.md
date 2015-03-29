@@ -23,6 +23,8 @@ Remember to go into YouComplete me and compile with:
     cd ~/.vim/bundle/YouCompleteMe
     ./install.sh --clang-completer
 
+Depends on `astyle, ctags and ofcourse vim`
+
 Usage
 -----
 For generating tags:
