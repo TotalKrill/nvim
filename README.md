@@ -21,7 +21,31 @@ Remember to go into YouComplete me and compile with:
     cd ~/.vim/bundle/YouCompleteMe
     ./install.sh --clang-completer
 
-Settings:
+Usage
+-----
+For generating tags:
+
+    ctags --languages=C -R
+
+Then usage:
+
+    Ctrl + ]  - Goto definition
+    Ctrl + T  - Jump back
+    Ctrl + W, Ctrl + ]  - Open in horisontal split
+
+Header/Source toggle:
+
+    F4
+
+Jump to filename under cursor:
+
+    gf
+
+Open file with name in subfolders:
+
+    :find name
+
+Settings
 ---------
 
 This .vimrc will include the plugins airline, pathogen, Youcompleteme and fugitive as

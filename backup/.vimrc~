@@ -8,6 +8,8 @@ set mouse=a
 " Include stdlib dirs for 'gf' command. Also include all subdir in
 " workingfolder
 let &path.="src/include,/usr/include/AL,.**"
+"Search for tags file
+set tags=./tags;$HOME
 
 " Map f4 to switch header/source for c projects
 map <F4> :find %:t:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
