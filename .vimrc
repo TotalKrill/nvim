@@ -41,11 +41,11 @@ set cursorline
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 " Key bindings
-map <C-b> :make <CR>
-map <C-J> :bnext<CR>
-map <C-K> :bprev<CR>
-map <C-L> :tabn<CR>
-map <C-H> :tabp<CR>
+map <C-b> :make <CR> " Builds using make
+map <C-J> :bnext<CR> " Next buffer!
+map <C-K> :bprev<CR> " Prev buffer!
+map <C-L> :tabn<CR>  " Next tab
+map <C-H> :tabp<CR>  " Prev tab
 
 " Airline settings
 set ttimeoutlen=50
@@ -66,6 +66,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 " OCaml settings
 filetype indent on
 filetype plugin on
+
 au BufRead,BufNewFile *.ml,*.mli compiler ocaml
 
 " auto open new tabs
