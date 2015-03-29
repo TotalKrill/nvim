@@ -5,7 +5,9 @@ Intro
 -----
 
 This is my private vim setting, it might be updated or it
-might not. I am not responsible for anything you destroy by using
+might not. The settings are somewhat commented in the .vimrc file
+
+I am not responsible for anything you destroy by using
 my settings file.
 
 Installation
@@ -33,17 +35,22 @@ Then usage:
     Ctrl + T  - Jump back
     Ctrl + W, Ctrl + ]  - Open in horisontal split
 
-Header/Source toggle:
+Header/Source toggle (anywhere in path):
 
-    F4
+    F4 - Will switch to a header/source file of current file
 
 Jump to filename under cursor:
 
-    gf
+    gf - Jump to filename under cursor
 
 Open file with name in subfolders:
 
     :find name
+
+Format file using bsd standards:
+
+    gggqG - format entire file
+    gq    - Format command, use movement to show whereto
 
 Settings
 ---------
