@@ -11,10 +11,13 @@ my settings file.
 Installation
 ------------
 To get this:
+
     git clone --recursive git@github.com:TotalKrill/.vim.git
+
 in home folder.
 
 Remember to go into YouComplete me and compile with:
+
     cd ~/.vim/bundle/YouCompleteMe
     ./install.sh --clang-completer
 
