@@ -75,7 +75,8 @@ au BufAdd,BufNewFile * nested tab sball
 " different color schemes depending on the file type
 syntax enable
 set background=dark
-colorscheme lizard
+let g:rehash256 = 1
+colorscheme molokai
 
 " Save your backups to a less annoying place than the current directory.
 " It saves it to ~/.vim/backup or . if all else fails.
