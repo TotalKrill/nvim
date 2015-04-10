@@ -27,7 +27,7 @@ execute pathogen#infect()
 set incsearch
 set ignorecase
 set smartcase
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=4 shiftwidth=4 expandtab
 set wrap linebreak nolist  " list disables line break
 set textwidth=0
 set wrapmargin=0
