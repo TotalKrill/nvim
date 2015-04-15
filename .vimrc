@@ -70,7 +70,7 @@ filetype plugin on
 au BufRead,BufNewFile *.ml,*.mli compiler ocaml
 
 " auto open new tabs
-au BufAdd,BufNewFile * nested tab sball
+"au BufAdd,BufNewFile * nested tab sball
 
 " different color schemes depending on the file type
 syntax enable
