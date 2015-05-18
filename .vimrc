@@ -36,6 +36,8 @@ set number
 set langmenu=en_US
 let $LANG = 'en_US'
 set cursorline
+" retain undo history in buffers
+set hidden
 
 " Default for YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
