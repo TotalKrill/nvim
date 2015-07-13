@@ -58,6 +58,12 @@ Format file using bsd standards:
     gggqG - format entire file
     gq    - Format command, use movement to show whereto
 
+Using doxygentoolkit:
+
+    :Dox        -   Will create template for functions, cursor must be at function.
+    :DoxLic     -   Will create license header
+    :DoxAuthor  -   Will create author line
+
 Settings
 ---------
 
