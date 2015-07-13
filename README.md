@@ -4,7 +4,7 @@ vimrc and plugins
 Intro
 -----
 
-This is my private vim setting, it might be updated or it
+This is my private nvim setting, it might be updated or it
 might not. The settings are somewhat commented in the .vimrc file
 
 I am not responsible for anything you destroy by using
@@ -18,12 +18,16 @@ To get this:
 
 in home folder.
 
-Remember to go into YouComplete me and compile with:
+Remember to go into the YouCompleteme folder and compile with:
 
     cd ~/.vim/bundle/YouCompleteMe
     ./install.sh --clang-completer
 
-Depends on `astyle, ctags and ofcourse vim`
+Depends on `astyle, ctags and ofcourse neovim`
+
+You will need a neovim with python 2 enabled. For
+archlinux a 'python2-neovim' package is available in the AUR
+
 
 Usage
 -----
