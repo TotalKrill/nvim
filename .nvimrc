@@ -4,7 +4,7 @@ set nocompatible
 " set Colour support so airline works
 set t_Co=256
 " set mouse activated
-"set mouse=a
+set mouse=
 " Include stdlib dirs for 'gf' command. Also include all subdir in
 " workingfolder
 let &path.="src/include,/usr/include/AL,.**"
@@ -26,6 +26,7 @@ augroup END
 execute pathogen#infect()
 " Set exiting term mode to esc esc
 tnoremap <esc><esc> <C-\><C-n>
+
 set incsearch
 set ignorecase
 set smartcase
@@ -66,11 +67,11 @@ let g:airline_right_sep=''
 let g:airline#extensions#whitespace#checks = [ 'indent' ]
 
 "Doxygen toolkit settings
-let g:DoxygenToolkit_briefTag_pre="@Synopsis  "
+let g:DoxygenToolkit_briefTag_pre="@Brief  "
 let g:DoxygenToolkit_paramTag_pre="@Param "
 let g:DoxygenToolkit_returnTag="@Returns   "
-let g:DoxygenToolkit_blockHeader="-------------------------------"
-let g:DoxygenToolkit_blockFooter="---------------------------------"
+let g:DoxygenToolkit_blockHeader=""
+let g:DoxygenToolkit_blockFooter=""
 let g:DoxygenToolkit_authorName="Kristoffer Ödmark"
 "let g:DoxygenToolkit_licenseTag="My own license" <-- !!! Does not end with "\<enter>"<F37>
 
