@@ -67,9 +67,9 @@ let g:airline_right_sep=''
 let g:airline#extensions#whitespace#checks = [ 'indent' ]
 
 "Doxygen toolkit settings
-let g:DoxygenToolkit_briefTag_pre="@Brief  "
-let g:DoxygenToolkit_paramTag_pre="@Param "
-let g:DoxygenToolkit_returnTag="@Returns   "
+let g:DoxygenToolkit_briefTag_pre="@brief  "
+let g:DoxygenToolkit_paramTag_pre="@param "
+let g:DoxygenToolkit_returnTag="@returns   "
 let g:DoxygenToolkit_blockHeader=""
 let g:DoxygenToolkit_blockFooter=""
 let g:DoxygenToolkit_authorName="Kristoffer Ödmark"
