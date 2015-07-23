@@ -51,8 +51,8 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 " Key bindings
 map <C-b> :make <CR> " Builds using make
-map <C-J> :bnext<CR> " Next buffer!
-map <C-K> :bprev<CR> " Prev buffer!
+map <C-K> :bnext<CR> " Next buffer!
+map <C-J> :bprev<CR> " Prev buffer!
 map <C-L> :tabn<CR>  " Next tab
 map <C-H> :tabp<CR>  " Prev tab
 
