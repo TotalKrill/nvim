@@ -21,9 +21,9 @@ in home folder.
 Remember to go into the YouCompleteme folder and compile with:
 
     cd ~/.vim/bundle/YouCompleteMe
-    ./install.sh --clang-completer
+    ./install.sh --clang-completer --system-libclang
 
-Depends on `astyle, ctags and ofcourse neovim`
+Depends on `astyle, ctags, clang and neovim`
 
 You will need a neovim with python 2 enabled. For
 archlinux a 'python2-neovim' package is available in the AUR
