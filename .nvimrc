@@ -47,7 +47,7 @@ set hidden
 set autoread
 
 " Default for YouCompleteMe
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "~/.nvim/.ycm_extra_conf.py"
 
 " Key bindings
 map <C-b> :make <CR> " Builds using make
@@ -92,9 +92,10 @@ au BufRead,BufNewFile *.ml,*.mli compiler ocaml
 "au BufAdd,BufNewFile * nested tab sball
 
 " different color schemes depending on the file type
+let g:cpp_class_scope_highlight = 1
 syntax enable
-set background=dark
-let g:rehash256 = 1
+"set background=dark
+"let g:rehash256 = 1
 colorscheme molokai
 
 " Save your backups to a less annoying place than the current directory.
