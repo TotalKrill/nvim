@@ -114,3 +114,18 @@ set backupdir+=.
 set backupdir^=~/.vim/backup/
 set backup
 
+" Automatic include guards in new header files
+function! s:insert_gates()
+  let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g")
+  execute "normal! i#ifndef " . gatename
+  execute "normal! o#define " . gatename . " "
+  execute "normal! Go#endif /* " . gatename . " */"
+  normal! kk
+endfunction
+
+function! s:autoauthor()
+    execute "DoxAuthor"
+endfunction
+
+autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
+autocmd BufNewFile *.{c,hpp,h,hpp} call <SID>autoauthor()
