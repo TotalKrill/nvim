@@ -128,4 +128,4 @@ function! s:autoauthor()
 endfunction
 
 autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
-autocmd BufNewFile *.{c,hpp,h,hpp} call <SID>autoauthor()
+autocmd BufNewFile *.{c,cpp,h,hpp} call <SID>autoauthor()
