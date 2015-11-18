@@ -14,13 +14,13 @@ Installation
 ------------
 To get this:
 
-    git clone --recursive git@github.com:TotalKrill/.vim.git
+    git clone --recursive git@github.com:TotalKrill/.vim.git $XDG_CONFIG_HOME/nvim
 
-in home folder.
+in ~/.config/nvim folder.
 
 Remember to go into the YouCompleteme folder and compile with:
 
-    cd ~/.vim/bundle/YouCompleteMe
+    cd ~/.config/nvim/bundle/YouCompleteMe
     ./install.sh --clang-completer --system-libclang
 
 Depends on `astyle, ctags, clang and neovim`
