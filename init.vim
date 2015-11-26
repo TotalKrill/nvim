@@ -1,6 +1,8 @@
 "
 " Manjaro version
 set nocompatible
+" Dont update view in scripts, 10000 times speedup
+set lazyredraw
 " set Colour support so airline works
 set t_Co=256
 " set mouse activated
