@@ -49,7 +49,7 @@ set hidden
 set autoread
 
 " Default for YouCompleteMe
-let g:ycm_global_ycm_extra_conf = "~/.nvim/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "~/.confg/nvim/.ycm_extra_conf.py"
 
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
