@@ -54,6 +54,9 @@ Then usage:
     Ctrl + T  - Jump back
     Ctrl + W, Ctrl + ]  - Open in horisontal split
 
+To open files with NERDTree use 'o' instead of 'Enter'.
+much more convenient
+
 Header/Source toggle (anywhere in path):
 
     F4 - Will switch to a header/source file of current file
