@@ -108,12 +108,13 @@ colorscheme molokai
 
 " Save your backups to a less annoying place than the current directory.
 " It saves it to ~/.vim/backup or . if all else fails.
-if isdirectory('~/.vim/backup') == 0
+if isdirectory('~/.nvim/backup') == 0
   :silent !mkdir -p ~/.vim/backup >/dev/null 2>&1
 endif
+
 set backupdir-=.
 set backupdir+=.
-set backupdir^=~/.vim/backup/
+set backupdir^=~/.nvim/backup/
 set backup
 
 " Automatic include guards in new header files
@@ -131,3 +132,10 @@ endfunction
 
 autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
 autocmd BufNewFile *.{c,cpp,h,hpp} call <SID>autoauthor()
+
+"NERDTree
+" Automatically enable NERDTree on startup
+autocmd vimenter * NERDTree
+
+"Auto close if only NERDTree is open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
