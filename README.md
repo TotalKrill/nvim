@@ -8,7 +8,18 @@ This is my private nvim setting, it might be updated or it
 might not. The settings are somewhat commented in the .vimrc file
 
 I am not responsible for anything you destroy by using
-my settings file.
+my settings file. I usually use this for c/c++ development.
+There is some auto stuff inserted to new c/c++ files, if you fork, change this
+to fit your setup.
+
+Plugins used:
+
+- NERDTree ( autostarts )
+- YouCompleteMe
+- AirLine
+- Pathogen
+- Fugitive
+
 
 Installation
 ------------
