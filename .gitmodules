@@ -13,7 +13,7 @@
 [submodule "bundle/DoxygenToolkit.vim"]
 	path = bundle/DoxygenToolkit.vim
 	url = https://github.com/mrtazz/DoxygenToolkit.vim.git
-[submodule "/home/krille/.nvim/bundle/vim-bufkill"]
+[submodule "bundle/vim-bufkill"]
 	path = /home/krille/.nvim/bundle/vim-bufkill
 	url = https://github.com/qpkorr/vim-bufkill
 [submodule "bundle/nerdtree"]
