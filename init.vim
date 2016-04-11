@@ -47,6 +47,8 @@ set cursorline
 set hidden
 " set so the files auto updates when changed on disk
 set autoread
+" Better default for yanking
+:map Y y$
 
 " Default for YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf.py"
@@ -139,3 +141,6 @@ autocmd vimenter * NERDTree
 
 "Auto close if only NERDTree is open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"toggle on Ctrl+n
+map <C-n> :NERDTreeToggle <cr>
