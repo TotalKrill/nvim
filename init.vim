@@ -24,10 +24,16 @@ augroup project
   autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
 augroup END
 
-
 execute pathogen#infect()
+
 " Set exiting term mode to esc esc
 tnoremap <esc><esc> <C-\><C-n>
+
+let g:UltiSnipsExpandTrigger='<C-s>'
+"let g:UltiSnipsListSnippets='<C-l>'
+let g:UltiSnipsJumpForwardTrigger='<C-b>'
+let g:UltiSnipsJumpBackwardTrigger='<C-z>'
+"let g:UltiSnipsSnippetsDir="~/.config/nvim/bundle/vim-snippets"
 
 set incsearch
 set ignorecase
@@ -63,8 +69,8 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 map <C-b> :make <CR> " Builds using make
 map <C-K> :bnext<CR> " Next buffer!
 map <C-J> :bprev<CR> " Prev buffer!
-map <C-L> :tabn<CR>  " Next tab
-map <C-H> :tabp<CR>  " Prev tab
+"map <C-L> :tabn<CR>  " Next tab
+"map <C-H> :tabp<CR>  " Prev tab
 
 " Airline settings
 set ttimeoutlen=50
@@ -137,7 +143,7 @@ autocmd BufNewFile *.{c,cpp,h,hpp} call <SID>autoauthor()
 
 "NERDTree
 " Automatically enable NERDTree on startup
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 
 "Auto close if only NERDTree is open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
