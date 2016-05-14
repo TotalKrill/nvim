@@ -22,3 +22,6 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "bundle/vim-openscad"]
+	path = bundle/vim-openscad
+	url = git@github.com:sirtaj/vim-openscad.git
