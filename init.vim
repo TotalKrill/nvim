@@ -150,3 +150,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "toggle on Ctrl+n
 map <C-n> :NERDTreeToggle <cr>
+
+set backupdir=~/.nvim/backup//
+set directory=~/.nvim/swp//
