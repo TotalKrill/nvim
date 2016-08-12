@@ -134,11 +134,15 @@ function! s:insert_gates()
   normal! kk
 endfunction
 
+function! s:include_header()
+endfunction
+
 function! s:autoauthor()
     execute "DoxAuthor"
 endfunction
 
 autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
+autocmd BufNewFile *.{c,cpp} call <SID>include_header()
 autocmd BufNewFile *.{c,cpp,h,hpp} call <SID>autoauthor()
 
 "NERDTree
