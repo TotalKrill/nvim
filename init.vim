@@ -157,3 +157,7 @@ map <C-n> :NERDTreeToggle <cr>
 
 set backupdir=~/.nvim/backup//
 set directory=~/.nvim/swp//
+
+" remap the jump to tag to use YouCompletMe instead, then use jumplist CTRL+I
+" and CTRL+O to jump back and forth
+nnoremap <C-]> :YcmCompleter GoTo <cr>
