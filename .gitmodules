@@ -28,3 +28,7 @@
 [submodule "bundle/YCM-Generator"]
 	path = bundle/YCM-Generator
 	url = git@github.com:rdnetto/YCM-Generator.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = git@github.com:Valloric/YouCompleteMe.git
+	branch = master
