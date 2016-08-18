@@ -25,7 +25,7 @@ Installation
 ------------
 To get this:
 
-    git clone --recurse-submodules git@github.com:TotalKrill/.nvim.git $XDG_CONFIG_HOME/nvim
+    git clone --recurse-submodules https://github.com/TotalKrill/.nvim.git $XDG_CONFIG_HOME/nvim
 
 in ~/.config/nvim folder.
 
