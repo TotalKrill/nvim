@@ -21,14 +21,14 @@
 	url = https://github.com/honza/vim-snippets.git
 [submodule "bundle/vim-openscad"]
 	path = bundle/vim-openscad
-	url = git@github.com:sirtaj/vim-openscad.git
+	url = https://github.com/sirtaj/vim-openscad.git
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
-	url = git://github.com/tpope/vim-commentary.git
+	url = https://github.com/tpope/vim-commentary.git
 [submodule "bundle/YCM-Generator"]
 	path = bundle/YCM-Generator
-	url = git@github.com:rdnetto/YCM-Generator.git
+	url = https://github.com/rdnetto/YCM-Generator.git
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
-	url = git@github.com:Valloric/YouCompleteMe.git
+	url = https://github.com/Valloric/YouCompleteMe.git
 	branch = master
