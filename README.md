@@ -14,38 +14,32 @@ to fit your setup.
 
 Plugins used:
 
-- NERDTree ( autostarts )
-- YouCompleteMe
-- AirLine
-- Pathogen
-- Fugitive
+- NERDTree       ( filetree plugin 'ctrl+n' for toggle )
+- YouCompleteMe  ( Must have for vim, code completion and more)
+- AirLine        ( status bar, also have themes)
+- bufkill        ( allows closing of a buffer, leaving windows untouched ':BW')
+- vim-plug       ( plugin loader and installer ':PlugInstall' will download and fix all plugins)
+- Fugitive       ( git wrapper)
+- vim-commenter  ( use 'gc' to comment stuff)
+- DoxygenToolkit ( Basic doxygen stuff for adding comments )
 
 
 Installation
 ------------
 To get this:
 
-    git clone --recurse-submodules https://github.com/TotalKrill/.nvim.git $XDG_CONFIG_HOME/nvim
+    git clone --recurse-submodules https://github.com/TotalKrill/.nvim.git ~/.config/nvim
 
-in ~/.config/nvim folder.
+Then start neovim and run:
 
-Remember to go into the YouCompleteme folder and compile with:
-
-    cd ~/.config/nvim/bundle/YouCompleteMe
-    ./install.sh --clang-completer --system-libclang
-
-Depends on `astyle, ctags, clang and neovim`
+    :PlugInstall
 
 You will need a neovim with python 2 enabled. For
-archlinux a 'python2-neovim' package is available in the AUR
+archlinux or manjaro a 'python2-neovim' package is available
 
 
 Usage
 -----
-For generating tags:
-
-    ctags --languages=C -R
-
 Then usage:
 
     Ctrl + ]  - Use YouCompleteMes Goto

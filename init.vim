@@ -38,7 +38,7 @@ Plug 'sirtaj/vim-openscad'
 Plug 'mrtazz/DoxygenToolkit.vim'
 
 Plug 'qpkorr/vim-bufkill'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
 
 " Using a non-master branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
