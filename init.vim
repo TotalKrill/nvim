@@ -24,7 +24,30 @@ augroup project
   autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
 augroup END
 
-execute pathogen#infect()
+"#execute pathogen#infect()
+call plug#begin('~/.config/nvim/plugged')
+" Using master branch
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+
+Plug 'sirtaj/vim-openscad'
+
+Plug 'mrtazz/DoxygenToolkit'
+
+Plug 'qpkorr/vim-bufkill'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang' }
+
+" Using a non-master branch
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+
+Plug 'scrooloose/nerdtree'
+
+
+" Add plugins to &runtimepath
+call plug#end()
 
 " Set exiting term mode to esc esc
 tnoremap <esc><esc> <C-\><C-n>

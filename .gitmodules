@@ -1,34 +1,3 @@
-[submodule "bundle/vim-airline"]
-	path = bundle/vim-airline
-	url = https://github.com/bling/vim-airline.git
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/DoxygenToolkit.vim"]
-	path = bundle/DoxygenToolkit.vim
-	url = https://github.com/mrtazz/DoxygenToolkit.vim.git
-[submodule "bundle/vim-bufkill"]
-	path = bundle/vim-bufkill
-	url = https://github.com/qpkorr/vim-bufkill
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/vim-snippets"]
-	path = bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
-[submodule "bundle/vim-openscad"]
-	path = bundle/vim-openscad
-	url = https://github.com/sirtaj/vim-openscad.git
-[submodule "bundle/vim-commentary"]
-	path = bundle/vim-commentary
-	url = https://github.com/tpope/vim-commentary.git
-[submodule "bundle/YCM-Generator"]
-	path = bundle/YCM-Generator
-	url = https://github.com/rdnetto/YCM-Generator.git
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
-	branch = master
