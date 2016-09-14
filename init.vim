@@ -35,7 +35,7 @@ Plug 'tpope/vim-commentary'
 
 Plug 'sirtaj/vim-openscad'
 
-Plug 'mrtazz/DoxygenToolkit'
+Plug 'mrtazz/DoxygenToolkit.vim'
 
 Plug 'qpkorr/vim-bufkill'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang' }
@@ -178,8 +178,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "toggle on Ctrl+n
 map <C-n> :NERDTreeToggle <cr>
 
-set backupdir=~/.nvim/backup//
-set directory=~/.nvim/swp//
+"set backupdir=~/.nvim/backup//
+"set directory=~/.nvim/swp//
 
 " remap the jump to tag to use YouCompletMe instead, then use jumplist CTRL+I
 " and CTRL+O to jump back and forth
