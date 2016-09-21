@@ -41,7 +41,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
 
 " Using a non-master branch
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+Plug 'rdnetto/YCM-Generator', { 'branch': 'develop' }
 
 Plug 'scrooloose/nerdtree'
 
