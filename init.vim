@@ -69,10 +69,12 @@ map <C-J> :bprev<CR> " Prev buffer!
 " Settings for clang-format
 let g:clang_format#style_options = {
             \ "BasedOnStyle" : "Google",
-            \ "BreakBeforeBraces" : "Stroustrup",
+            \ "BreakBeforeBraces" : "Allman",
             \ "AccessModifierOffset" : -2,
             \ "AllowShortIfStatementsOnASingleLine" : "true",
             \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "TabWidth" : "2",
+            \ "UseTab" : "Never",
             \ "Standard" : "C++11"}
 
 " map to <Leader>cf in C++ code
