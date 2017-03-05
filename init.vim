@@ -161,9 +161,7 @@ set backup
 " Automatic include guards in new header files
 function! s:insert_gates()
   let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g")
-  execute "normal! i#ifndef " . gatename
-  execute "normal! o#define " . gatename . " "
-  execute "normal! Go#endif /* " . gatename . " */"
+  execute "normal! i#pragma once"
   normal! kk
 endfunction
 
