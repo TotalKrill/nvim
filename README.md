@@ -28,7 +28,7 @@ Installation
 ------------
 To get this:
 
-    git clone --recurse-submodules https://github.com/TotalKrill/.nvim.git ~/.config/nvim
+    git clone --recursive-submodules https://github.com/TotalKrill/.nvim.git ~/.config/nvim
 
 Then start neovim and run:
 
