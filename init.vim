@@ -13,14 +13,20 @@ Plug 'sirtaj/vim-openscad'
 Plug 'mrtazz/DoxygenToolkit.vim'
 
 Plug 'qpkorr/vim-bufkill'
+
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
 
 " Using a non-master branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'develop' }
 
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'rhysd/vim-clang-format'
+
+Plug 'jlanzarotta/bufexplorer'
+
+Plug 'vim-scripts/a.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -30,11 +36,6 @@ call plug#end()
 " Set exiting term mode to esc esc
 tnoremap <esc><esc> <C-\><C-n>
 
-let g:UltiSnipsExpandTrigger='<C-s>'
-"let g:UltiSnipsListSnippets='<C-l>'
-let g:UltiSnipsJumpForwardTrigger='<C-b>'
-let g:UltiSnipsJumpBackwardTrigger='<C-z>'
-"let g:UltiSnipsSnippetsDir="~/.config/nvim/bundle/vim-snippets"
 
 set incsearch
 set ignorecase
@@ -59,7 +60,7 @@ set autoread
 
 
 "===== Key bindings ====="
-map <C-b> :make <CR> " Builds using make
+map <C-b> :BufExplorer<CR> " Explore buffers
 map <C-K> :bnext<CR> " Next buffer!
 map <C-J> :bprev<CR> " Prev buffer!
 "map <C-L> :tabn<CR>  " Next tab
@@ -116,7 +117,9 @@ let &path.="src/include,/usr/include/AL,.**"
 set tags=./tags;$HOME
 
 " Map f4 to switch header/source for c projects
-map <F4> :find %:t:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
+"map <F4> :find %:t:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
+map <F4> :A<CR>
+
 "Map autoformat after bsd rules
 autocmd BufNewFile,BufRead *.c set formatprg=astyle\ --style=bsd
 
