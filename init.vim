@@ -28,6 +28,8 @@ Plug 'jlanzarotta/bufexplorer'
 
 Plug 'vim-scripts/a.vim'
 
+Plug 'machakann/vim-highlightedyank'
+
 " Add plugins to &runtimepath
 call plug#end()
 
