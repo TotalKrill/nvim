@@ -42,10 +42,10 @@ tnoremap <esc><esc> <C-\><C-n>
 set incsearch
 set ignorecase
 set smartcase
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=2 shiftwidth=2 expandtab
 set wrap linebreak nolist  " list disables line break
 " indicate where the 80 chars wide is
-set cc=80
+set cc=100
 set textwidth=0
 set wrapmargin=0
 set spell spelllang=en_us
