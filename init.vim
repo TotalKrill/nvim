@@ -22,6 +22,7 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'develop' }
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+Plug 'kana/vim-operator-user'
 Plug 'rhysd/vim-clang-format'
 
 Plug 'jlanzarotta/bufexplorer'
@@ -70,20 +71,16 @@ map <C-J> :bprev<CR> " Prev buffer!
 
 "===== Clang Format ====="
 " Settings for clang-format
-let g:clang_format#style_options = {
-            \ "BasedOnStyle" : "Google",
-            \ "BreakBeforeBraces" : "Allman",
-            \ "AccessModifierOffset" : -2,
-            \ "AllowShortIfStatementsOnASingleLine" : "true",
-            \ "AlwaysBreakTemplateDeclarations" : "true",
-            \ "TabWidth" : "2",
-            \ "UseTab" : "Never",
-            \ "Standard" : "C++11"}
+let g:clang_format#detect_style_file = 1
+let g:clang_format#enable_fallback_style = 0
+let g:clang_format#auto_format_on_insert_leave = 1
 
 " map to <Leader>cf in C++ code
-autocmd FileType c,h,cpp,hpp,objc nnoremap <C-f> :<C-u>ClangFormat<CR>
-autocmd FileType c,h,cpp,hpp,objc vnoremap <C-f> :ClangFormat<CR>
+" autocmd FileType c,h,cpp,hpp,objc nnoremap <C-f> :<C-u>ClangFormat<CR>
+" autocmd FileType c,h,cpp,hpp,objc vnoremap <C-f> :ClangFormat<CR>
 
+"autocmd FileType c,cpp,h,hpp xnoremap <=> :'<,'>ClangFormat<CR>
+autocmd FileType c,cpp,objc map <buffer> = <Plug>(operator-clang-format)
 "===== Airline ====="
 set ttimeoutlen=50
 set laststatus=2
