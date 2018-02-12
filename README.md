@@ -23,12 +23,17 @@ Plugins used:
 - vim-commenter  ( use 'gc' to comment stuff)
 - DoxygenToolkit ( Basic doxygen stuff for adding comments )
 
+Requires
+--------
+
+neovim clang python-neovim python2-neovim
 
 Installation
 ------------
+
 To get this:
 
-    git clone --recursive-submodules https://github.com/TotalKrill/.nvim.git ~/.config/nvim
+    git clone --recurse-submodules https://github.com/TotalKrill/.nvim.git ~/.config/nvim
 
 Then start neovim and run:
 
