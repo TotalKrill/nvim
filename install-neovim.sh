@@ -5,6 +5,6 @@ echo "Clone git repo"
 git clone --recurse-submodules https://github.com/TotalKrill/.nvim.git ~/.config/nvim
 
 echo "Use pluginstall to compile ycm and download plugins"
-neovim -c ":PlugInstall" -c ":qa"
+nvim -c ":PlugInstall" -c ":qa"
 
 echo "if no errors, you can now run neovim with 'nvim'"
