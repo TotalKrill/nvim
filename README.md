@@ -26,7 +26,7 @@ Plugins used:
 Requires
 --------
 
-    neovim clang python-neovim python2-neovim
+    neovim clang python-neovim python2-neovim cmake
 
 Installation
 ------------
