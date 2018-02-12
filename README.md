@@ -2,8 +2,8 @@ vimrc and plugins
 =================
 
 Oneline installation for manjaro:
-    wget -O - https://raw.githubusercontent.com/TotalKrill/nvim/master/install-neovim.sh && bash install-neovim.sh
 
+    wget -O - https://raw.githubusercontent.com/TotalKrill/nvim/master/install-neovim.sh | bash
 
 Intro
 -----
