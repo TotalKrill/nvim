@@ -31,6 +31,8 @@ Plug 'vim-scripts/a.vim'
 
 Plug 'machakann/vim-highlightedyank'
 
+Plug 'rust-lang/rust.vim'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -149,17 +151,6 @@ syntax enable
 "let g:rehash256 = 1
 colorscheme molokai
 
-" Save your backups to a less annoying place than the current directory.
-" It saves it to ~/.vim/backup or . if all else fails.
-if isdirectory('~/.nvim/backup') == 0
-  :silent !mkdir -p ~/.vim/backup >/dev/null 2>&1
-endif
-
-set backupdir-=.
-set backupdir+=.
-set backupdir^=~/.nvim/backup/
-set backup
-
 " Automatic include guards in new header files
 function! s:insert_gates()
   let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g")
@@ -204,3 +195,20 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " every write should generate a new file for youcompleteme
 " map :w<cr> :w<cr>:YcmGenerateConfig -f -q<cr>
+
+"===== Typo fixes ====="
+"Fix common typos when saving and exiting
+command WQ wq
+command Wq wq
+command W  w
+command Q  q
+
+"===== Persistent Undo ====="
+" Keep undo history across sessions, by storing in file.
+silent !mkdir ~/.config/nvim/backups > /dev/null 2>&1
+set undodir=~/.config/nvim/backups
+set undofile
+
+"===== No swap files ====="
+set backupdir-=.
+set backupdir^=~/tmp,/tmp

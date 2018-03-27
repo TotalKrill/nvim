@@ -1,5 +1,5 @@
 .netrwhist
-backup/*
+backups/*
 *.pyc
 *~
 plugged/*
