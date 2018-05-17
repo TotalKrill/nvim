@@ -212,3 +212,7 @@ set undofile
 "===== No swap files ====="
 set backupdir-=.
 set backupdir^=~/tmp,/tmp
+
+
+"===== Fold the code ====="
+set foldmethod=syntax
