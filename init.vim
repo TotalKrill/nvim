@@ -216,3 +216,5 @@ set backupdir^=~/tmp,/tmp
 
 "===== Fold the code ====="
 set foldmethod=syntax
+" activate the folder
+set foldcolumn=1
