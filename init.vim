@@ -1,14 +1,15 @@
 
-"#execute pathogen#infect()
+let g:ConqueGdb_GdbExe = 'arm-none-eabi-gdb'
+
 call plug#begin('~/.config/nvim/plugged')
 " Using master branch
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-commentary'
 
-Plug 'sirtaj/vim-openscad'
+Plug 'tpope/vim-commentary'
+"Plug 'sirtaj/vim-openscad'
 
 Plug 'mrtazz/DoxygenToolkit.vim'
 
@@ -23,7 +24,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'kana/vim-operator-user'
-Plug 'rhysd/vim-clang-format'
+"Plug 'rhysd/vim-clang-format'
 
 Plug 'jlanzarotta/bufexplorer'
 
@@ -32,6 +33,8 @@ Plug 'vim-scripts/a.vim'
 Plug 'machakann/vim-highlightedyank'
 
 Plug 'rust-lang/rust.vim'
+
+Plug 'vim-scripts/Conque-GDB'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -45,7 +48,7 @@ tnoremap <esc><esc> <C-\><C-n>
 set incsearch
 set ignorecase
 set smartcase
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=4 shiftwidth=4 expandtab
 set wrap linebreak nolist  " list disables line break
 " indicate where the 80 chars wide is
 set cc=100
@@ -53,6 +56,7 @@ set textwidth=0
 set wrapmargin=0
 set spell spelllang=en_us
 set number
+set relativenumber
 set langmenu=en_US
 let $LANG = 'en_US'
 set cursorline
@@ -82,7 +86,7 @@ let g:clang_format#auto_format_on_insert_leave = 1
 " autocmd FileType c,h,cpp,hpp,objc vnoremap <C-f> :ClangFormat<CR>
 
 "autocmd FileType c,cpp,h,hpp xnoremap <=> :'<,'>ClangFormat<CR>
-autocmd FileType c,cpp,objc map <buffer> = <Plug>(operator-clang-format)
+"autocmd FileType c,cpp,objc map <buffer> = <Plug>(operator-clang-format)
 "===== Airline ====="
 set ttimeoutlen=50
 set laststatus=2
@@ -122,7 +126,7 @@ set tags=./tags;$HOME
 map <F4> :A<CR>
 
 "Map autoformat after bsd rules
-autocmd BufNewFile,BufRead *.c set formatprg=astyle\ --style=bsd
+"autocmd BufNewFile,BufRead *.c set formatprg=astyle\ --style=bsd
 
 " Doxygen syntax
 augroup project
@@ -186,11 +190,14 @@ map <C-n> :NERDTreeToggle <cr>
 " and CTRL+O to jump back and forth
 nnoremap <C-]> :YcmCompleter GoTo <cr>
 
+"Youcompleteme fix
+let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
+
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
 " insert mode
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " every write should generate a new file for youcompleteme
