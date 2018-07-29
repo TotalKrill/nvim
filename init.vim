@@ -220,8 +220,9 @@ set undofile
 set backupdir-=.
 set backupdir^=~/tmp,/tmp
 
-
 "===== Fold the code ====="
 set foldmethod=syntax
 " activate the folder
 set foldcolumn=1
+" automatically fold larger files, for small ones, it doesn't matter
+autocmd! BufReadPost * :if line('$') < 150 | set foldlevel=99 | else | set foldlevel=1 |endif
