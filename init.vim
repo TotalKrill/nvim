@@ -216,6 +216,12 @@ silent !mkdir ~/.config/nvim/backups > /dev/null 2>&1
 set undodir=~/.config/nvim/backups
 set undofile
 
+"===== Rust ====="
+autocmd FileType rust nnoremap <buffer> <C-f> :RustFmt<CR>
+let g:rustfmt_autosave = 1
+let g:rustfmt_command = "rustfmt"
+au BufNewFile,BufRead *.rs setlocal colorcolumn=100
+
 "===== No swap files ====="
 set backupdir-=.
 set backupdir^=~/tmp,/tmp
