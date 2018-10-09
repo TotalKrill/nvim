@@ -15,7 +15,7 @@ Plug 'mrtazz/DoxygenToolkit.vim'
 
 Plug 'qpkorr/vim-bufkill'
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang --rust-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang --rust-completer --system-boost'}
 
 " Using a non-master branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'develop' }
@@ -221,6 +221,7 @@ autocmd FileType rust nnoremap <buffer> <C-f> :RustFmt<CR>
 let g:rustfmt_autosave = 1
 let g:rustfmt_command = "rustfmt"
 au BufNewFile,BufRead *.rs setlocal colorcolumn=100
+let g:ycm_rust_src_path = '~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
 
 "===== No swap files ====="
 set backupdir-=.
