@@ -185,6 +185,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "toggle on Ctrl+n
 map <C-n> :NERDTreeToggle <cr>
 
+
 "===== YouCompleteMe ====="
 " remap the jump to tag to use YouCompleteMe instead, then use jumplist CTRL+I
 " and CTRL+O to jump back and forth
@@ -209,6 +210,9 @@ command WQ wq
 command Wq wq
 command W  w
 command Q  q
+
+"===== Close current buffer ====="
+nnoremap <C-x> :BW<cr>
 
 "===== Persistent Undo ====="
 " Keep undo history across sessions, by storing in file.
