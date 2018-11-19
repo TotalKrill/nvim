@@ -185,6 +185,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "toggle on Ctrl+n
 map <C-n> :NERDTreeToggle <cr>
 
+:let g:NERDTreeWinSize=60
+
 
 "===== YouCompleteMe ====="
 " remap the jump to tag to use YouCompleteMe instead, then use jumplist CTRL+I
