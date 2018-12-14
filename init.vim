@@ -115,6 +115,7 @@ set lazyredraw
 set t_Co=256
 " set mouse activated
 set mouse=
+set clipboard=unnamedplus
 " Include stdlib dirs for 'gf' command. Also include all subdir in
 " workingfolder
 let &path.="src/include,/usr/include/AL,.**"
