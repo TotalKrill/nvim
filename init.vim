@@ -5,13 +5,9 @@ call plug#begin('~/.config/nvim/plugged')
 " Using master branch
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
 
 Plug 'tpope/vim-fugitive'
-
-Plug 'tpope/vim-commentary'
-"Plug 'sirtaj/vim-openscad'
-
-Plug 'mrtazz/DoxygenToolkit.vim'
 
 Plug 'qpkorr/vim-bufkill'
 
@@ -20,21 +16,34 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-
 " Using a non-master branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'develop' }
 
+" Navigation
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'airblade/vim-rooter'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'jlanzarotta/bufexplorer'
+
+"Editing
+Plug 'tpope/vim-commentary'
+Plug 'mrtazz/DoxygenToolkit.vim'
 
 Plug 'kana/vim-operator-user'
 "Plug 'rhysd/vim-clang-format'
 
-Plug 'jlanzarotta/bufexplorer'
-
 Plug 'vim-scripts/a.vim'
-
 Plug 'machakann/vim-highlightedyank'
 
+" Syntactic language support
 Plug 'rust-lang/rust.vim'
 
-Plug 'vim-scripts/Conque-GDB'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+
 
 " Add plugins to &runtimepath
 call plug#end()
