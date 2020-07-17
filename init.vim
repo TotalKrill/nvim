@@ -11,11 +11,6 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'qpkorr/vim-bufkill'
 
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang --rust-completer --system-boost'}
-
-" " Using a non-master branch
-" Plug 'rdnetto/YCM-Generator', { 'branch': 'develop' }
-
 " Navigation
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -35,13 +30,6 @@ Plug 'kana/vim-operator-user'
 Plug 'vim-scripts/a.vim'
 Plug 'machakann/vim-highlightedyank'
 
-" " Syntactic language support
-" Plug 'rust-lang/rust.vim'
-
-" Plug 'autozimu/LanguageClient-neovim', {
-"     \ 'branch': 'next',
-"     \ 'do': 'bash install.sh',
-"     \ }
 "
 " Semantic language support
 " Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
@@ -50,12 +38,7 @@ Plug 'roxma/nvim-yarp'
 
 " Completion plugins
 Plug 'ncm2/ncm2-bufword'
-" Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
-
-" LanguageClient enhancements
-" Showing function signature and inline doc.
-" Plug 'Shougo/echodoc.vim'
 
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -139,11 +122,11 @@ let g:ycm_rust_src_path = '~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/
 " Set so the files auto updates when changed on disk
 set autoread
 
-"No swap files
+" No swap files
 set backupdir-=.
 set backupdir^=~/tmp,/tmp
 
-"Fold the code
+" Fold the code
 set foldmethod=syntax
 " activate the folder
 set foldcolumn=1
@@ -182,7 +165,7 @@ set clipboard=unnamedplus
 " Include stdlib dirs for 'gf' command. Also include all subdir in
 " workingfolder
 let &path.="src/include,/usr/include/AL,.**"
-"Search for tags file, from current directory until home directory
+" Search for tags file, from current directory until home directory
 set tags=./tags;$HOME
 
 
