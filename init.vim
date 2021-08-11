@@ -43,6 +43,8 @@ Plug 'ncm2/ncm2-path'
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'neovimhaskell/haskell-vim'
+
 " Syntactic language support
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
@@ -195,6 +197,18 @@ set hidden
 set autoread
 " Better default for yanking
 :map Y y$
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"==== Haskell
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "==== Coc settings
