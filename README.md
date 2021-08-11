@@ -9,28 +9,18 @@ Intro
 -----
 
 This is my private nvim setting, it might be updated or it
-might not. The settings are somewhat commented in the .vimrc file
+might not. The settings are somewhat commented in the init.nvim
 
-I am not responsible for anything you destroy by using
-my settings file. I usually use this for c/c++ development.
-There is some auto stuff inserted to new c/c++ files, if you fork, change this
-to fit your setup.
+used mostly for rust development, so many rust components are assumed to be installed
 
-Plugins used:
 
-- NERDTree       ( filetree plugin 'ctrl+n' for toggle )
-- YouCompleteMe  ( Must have for vim, code completion and more)
-- AirLine        ( status bar, also have themes)
-- bufkill        ( allows closing of a buffer, leaving windows untouched ':BW')
-- vim-plug       ( plugin loader and installer ':PlugInstall' will download and fix all plugins)
-- Fugitive       ( git wrapper)
-- vim-commenter  ( use 'gc' to comment stuff)
-- DoxygenToolkit ( Basic doxygen stuff for adding comments )
+Plugins used: See plug section of Init .nvim
+
 
 Requires
 --------
 
-    neovim clang python-neovim python2-neovim cmake
+    neovim clang python-neovim python2-neovim cmake rust analyzer
 
 Installation
 ------------
@@ -46,42 +36,19 @@ Then start neovim and run:
 You will need a neovim with python 2 enabled. For
 archlinux or manjaro a 'python2-neovim' package is available
 
+You need some rust components for this:
 
-Usage
------
-Then usage:
+    :CocInstall coc-rust-analyzer
 
-    Ctrl + ]  - Use YouCompleteMes Goto
-    Ctrl + O  - Jump back
-    Ctrl + I  - Jump forward
+You also need rust-analyzer
 
-    Ctrl + W, Ctrl + ]  - Open in horisontal split
+    sudo pacman -S rust-analyzer
 
-To open files with NERDTree use 'o' instead of 'Enter'.
-much more convenient
+And rust source for cargo
 
-Header/Source toggle (anywhere in path, not perfect):
+    rustup component add rust-src
 
-    F4 - Will switch to a header/source file of current file
 
-Jump to filename under cursor:
-
-    gf - Jump to filename under cursor
-
-Open file with name in subfolders:
-
-    :find name
-
-Format file using bsd standards:
-
-    gggqG - format entire file
-    gq    - Format command, use movement to show whereto
-
-Using doxygentoolkit:
-
-    :Dox        -   Will create template for functions, cursor must be at function.
-    :DoxLic     -   Will create license header
-    :DoxAuthor  -   Will create author line
 
 Settings
 ---------
